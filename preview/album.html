@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0710">
+<title>Rock Album · PoliMusic</title>
+<link rel="stylesheet" href="../Assets/Css/app.css">
+</head>
+<body data-page="album">
+<svg xmlns="http://www.w3.org/2000/svg" class="svg-sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 9.5 12 2l9 7.5V20a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7.5"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-library" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M6 3.8v16.4c0 .9 1 1.4 1.7.9l12.6-8.2a1 1 0 0 0 0-1.7L7.7 2.9C7 2.4 6 2.9 6 3.8z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" rx="1" fill="currentColor" stroke="none"/><rect x="14" y="4" width="4" height="16" rx="1" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-prev" viewBox="0 0 24 24"><path d="M19 20 9 12l10-8z" fill="currentColor" stroke="none"/><rect x="4" y="4" width="2.4" height="16" rx="1" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-next" viewBox="0 0 24 24"><path d="M5 4l10 8-10 8z" fill="currentColor" stroke="none"/><rect x="17.6" y="4" width="2.4" height="16" rx="1" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M16 3h5v5"/><path d="M4 20 21 3"/><path d="M21 16v5h-5"/><path d="m15 15 6 6"/><path d="m4 4 5 5"/></symbol>
+    <symbol id="i-repeat" viewBox="0 0 24 24"><path d="m17 1 4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="m7 23-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></symbol>
+    <symbol id="i-repeat-one" viewBox="0 0 24 24"><path d="m17 1 4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="m7 23-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/><path d="M11 10.5h1.6v4"/></symbol>
+    <symbol id="i-volume" viewBox="0 0 24 24"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></symbol>
+    <symbol id="i-volume-off" viewBox="0 0 24 24"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="m16 9 5 6M21 9l-5 6"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4z"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/></symbol>
+    <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+    <symbol id="i-disc" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 11a7 7 0 0 1-14 0"/><path d="M12 18v4M8 22h8"/></symbol>
+    <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m20 6-11 11-5-5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m17 8-5-5-5 5"/><path d="M12 3v12"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 8v5M12 16.5v.01"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21.2l7.8-7.8 1.1-1.1a5.5 5.5 0 0 0 0-7.7z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+    <symbol id="i-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.6" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/><circle cx="19" cy="12" r="1.6" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19"/><path d="M12 2.5a15 15 0 0 1 0 19 15 15 0 0 1 0-19z"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+    <symbol id="i-save" viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><path d="M17 21v-8H7v8M7 3v5h8"/></symbol>
+  </defs>
+</svg>
+
+<div class="app" id="app">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="home.html">
+      <span class="brand-mark"><svg width="20" height="20"><use href="#i-music"/></svg></span>
+      <span class="brand-name">PoliMusic</span>
+    </a>
+    <nav class="nav">
+      <a class="nav-item" href="home.html"><svg class="ico"><use href="#i-home"/></svg><span>Inicio</span></a>
+      <a class="nav-item" href="home.html"><svg class="ico"><use href="#i-search"/></svg><span>Buscar</span></a>
+      <a class="nav-item" href="canciones.html"><svg class="ico"><use href="#i-music"/></svg><span>Canciones</span></a>
+      <a class="nav-item" href="playlist.html"><svg class="ico"><use href="#i-library"/></svg><span>Tu biblioteca</span></a>
+    </nav>
+    <div class="side-block">
+      <div class="side-head"><span>Playlists</span>
+        <a class="side-add" href="playlist.html" title="Crear playlist">
+          <svg class="ico"><use href="#i-plus"/></svg></a></div>
+      <div class="side-list"><a class="side-pl" href="playlist.html"><img src="../playlistImages/playlist1.png" alt=""><span>Nocturno 01</span></a><a class="side-pl" href="playlist.html"><img src="../playlistImages/playlist2.png" alt=""><span>Estudio profundo</span></a><a class="side-pl" href="playlist.html"><img src="../playlistImages/playlist3.png" alt=""><span>Ruta al amanecer</span></a><a class="side-pl" href="playlist.html"><img src="../playlistImages/default.jpg" alt=""><span>Playlist 1</span></a></div>
+    </div>
+    
+    <div class="side-foot">
+      <a class="user-chip" href="home.html">
+        <img class="avatar" src="../userImages/default.jpg" alt="">
+        <span class="user-chip-txt"><strong>Claudio Peñaherrera</strong><em>Usuario</em></span>
+      </a>
+      <a class="logout-btn" href="index.html" title="Cerrar sesión">
+        <svg class="ico"><use href="#i-logout"/></svg></a>
+    </div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+  <main class="main">
+    <header class="topbar">
+      <button class="icon-btn only-mobile" id="menuBtn" type="button" aria-label="Menú">
+        <svg class="ico"><use href="#i-menu"/></svg></button>
+      <div class="history only-desktop">
+        <button class="icon-btn" type="button"><svg class="ico"><use href="#i-chevron-left"/></svg></button>
+        <button class="icon-btn" type="button"><svg class="ico"><use href="#i-chevron-right"/></svg></button>
+      </div>
+      <form class="searchbar" onsubmit="return false">
+        <svg class="ico"><use href="#i-search"/></svg>
+        <input type="search" placeholder="¿Qué quieres escuchar?" aria-label="Buscar">
+        <button type="submit" class="searchbar-go">Enter</button>
+      </form>
+      <div class="topbar-right">
+        <a class="pill-btn only-desktop" href="playlist.html">
+          <svg class="ico ico-sm"><use href="#i-plus"/></svg> Nueva playlist</a>
+        <details class="usermenu">
+          <summary>
+            <img class="avatar" src="../userImages/default.jpg" alt="">
+            <span class="usermenu-name only-desktop">Claudio Peñaherrera</span>
+            <svg class="ico ico-sm"><use href="#i-chevron-down"/></svg>
+          </summary>
+          <div class="usermenu-pop">
+            <a href="home.html"><svg class="ico ico-sm"><use href="#i-user"/></svg> Mi perfil</a>
+            <a href="playlist.html"><svg class="ico ico-sm"><use href="#i-library"/></svg> Mis playlists</a>
+            <a href="admin-users.html"><svg class="ico ico-sm"><use href="#i-shield"/></svg> Panel de administración</a>
+            <hr>
+            <a class="danger" href="index.html"><svg class="ico ico-sm"><use href="#i-logout"/></svg> Cerrar sesión</a>
+          </div>
+        </details>
+      </div>
+    </header>
+    <div class="view" id="main-view">
+      
+      <div class="detail-head">
+        <img class="detail-art" src="../albumImages/album1.png" alt="Rock Album">
+        <div class="detail-info">
+          <div class="detail-kind">Álbum</div>
+          <h1>Rock Album</h1>
+          <div class="detail-meta">
+            <strong><a href="album.html" style="color:var(--txt)">Juan Gabriel</a></strong>
+            <span class="dot">·</span><span>1976</span>
+            <span class="dot">·</span><span>5 canciones</span>
+            <span class="dot">·</span><span>10 reproducciones</span>
+          </div>
+        </div>
+      </div>
+      <div class="detail-actions">
+        <a class="btn btn-primary" href="album.html"><svg class="ico ico-sm"><use href="#i-play"/></svg> Reproducir</a>
+        <a class="btn btn-ghost btn-sm" href="admin-users.html"><svg class="ico ico-sm"><use href="#i-edit"/></svg> Editar álbum</a>
+      </div>
+      <section class="section" style="margin-top:10px">
+        <div class="track-head"><span style="text-align:right">#</span><span>Título</span>
+      <span style="text-align:right" class="th-plays">Reproducciones</span><span></span></div>
+        <div class="tracklist"><div class="track" data-song-id="1" data-index="1" data-name="Adventure"
+         data-artist="Juan Gabriel" data-cover="../albumImages/album1.png" data-url="../songFiles/bensound-adventure.mp3">
+      <div class="t-idx"><span class="idx-num">1</span>
+        <button class="idx-play" type="button" data-play aria-label="Reproducir">
+          <svg class="ico"><use href="#i-play"/></svg></button></div>
+      <div class="t-main"><img class="t-cover" src="../albumImages/album1.png" alt="">
+        <div class="t-txt"><span class="t-name">Adventure</span>
+          <span class="t-artist"><a href="album.html">Juan Gabriel</a></span></div></div>
+      <div class="t-album">Rock Album</div>
+      <div class="t-plays">0 reps.</div>
+      <div class="t-actions"></div>
+    </div><div class="track" data-song-id="2" data-index="2" data-name="Dreams"
+         data-artist="Juan Gabriel" data-cover="../albumImages/album1.png" data-url="../songFiles/bensound-dreams.mp3">
+      <div class="t-idx"><span class="idx-num">2</span>
+        <button class="idx-play" type="button" data-play aria-label="Reproducir">
+          <svg class="ico"><use href="#i-play"/></svg></button></div>
+      <div class="t-main"><img class="t-cover" src="../albumImages/album1.png" alt="">
+        <div class="t-txt"><span class="t-name">Dreams</span>
+          <span class="t-artist"><a href="album.html">Juan Gabriel</a></span></div></div>
+      <div class="t-album">Rock Album</div>
+      <div class="t-plays">1 reps.</div>
+      <div class="t-actions"></div>
+    </div><div class="track" data-song-id="3" data-index="3" data-name="Energy"
+         data-artist="Juan Gabriel" data-cover="../albumImages/album1.png" data-url="../songFiles/bensound-energy.mp3">
+      <div class="t-idx"><span class="idx-num">3</span>
+        <button class="idx-play" type="button" data-play aria-label="Reproducir">
+          <svg class="ico"><use href="#i-play"/></svg></button></div>
+      <div class="t-main"><img class="t-cover" src="../albumImages/album1.png" alt="">
+        <div class="t-txt"><span class="t-name">Energy</span>
+          <span class="t-artist"><a href="album.html">Juan Gabriel</a></span></div></div>
+      <div class="t-album">Rock Album</div>
+      <div class="t-plays">2 reps.</div>
+      <div class="t-actions"></div>
+    </div><div class="track" data-song-id="4" data-index="4" data-name="Scifi"
+         data-artist="Juan Gabriel" data-cover="../albumImages/album1.png" data-url="../songFiles/bensound-scifi.mp3">
+      <div class="t-idx"><span class="idx-num">4</span>
+        <button class="idx-play" type="button" data-play aria-label="Reproducir">
+          <svg class="ico"><use href="#i-play"/></svg></button></div>
+      <div class="t-main"><img class="t-cover" src="../albumImages/album1.png" alt="">
+        <div class="t-txt"><span class="t-name">Scifi</span>
+          <span class="t-artist"><a href="album.html">Juan Gabriel</a></span></div></div>
+      <div class="t-album">Rock Album</div>
+      <div class="t-plays">3 reps.</div>
+      <div class="t-actions"></div>
+    </div><div class="track" data-song-id="5" data-index="5" data-name="Tomorrow"
+         data-artist="Juan Gabriel" data-cover="../albumImages/album1.png" data-url="../songFiles/bensound-tomorrow.mp3">
+      <div class="t-idx"><span class="idx-num">5</span>
+        <button class="idx-play" type="button" data-play aria-label="Reproducir">
+          <svg class="ico"><use href="#i-play"/></svg></button></div>
+      <div class="t-main"><img class="t-cover" src="../albumImages/album1.png" alt="">
+        <div class="t-txt"><span class="t-name">Tomorrow</span>
+          <span class="t-artist"><a href="album.html">Juan Gabriel</a></span></div></div>
+      <div class="t-album">Rock Album</div>
+      <div class="t-plays">4 reps.</div>
+      <div class="t-actions"></div>
+    </div></div>
+      </section>
+    
+      <script type="application/json" id="pm-queue" data-autoplay="0">{"tracks": [{"id": 1, "name": "Adventure", "url": "../songFiles/bensound-adventure.mp3", "cover": "../albumImages/album1.png", "artist": "Juan Gabriel", "album": "Rock Album"}, {"id": 2, "name": "Dreams", "url": "../songFiles/bensound-dreams.mp3", "cover": "../albumImages/album1.png", "artist": "Juan Gabriel", "album": "Rock Album"}, {"id": 3, "name": "Energy", "url": "../songFiles/bensound-energy.mp3", "cover": "../albumImages/album1.png", "artist": "Juan Gabriel", "album": "Rock Album"}, {"id": 4, "name": "Scifi", "url": "../songFiles/bensound-scifi.mp3", "cover": "../albumImages/album1.png", "artist": "Juan Gabriel", "album": "Rock Album"}, {"id": 5, "name": "Tomorrow", "url": "../songFiles/bensound-tomorrow.mp3", "cover": "../albumImages/album1.png", "artist": "Juan Gabriel", "album": "Rock Album"}]}</script>
+    </div>
+  </main>
+</div>
+<div class="player" id="player">
+  <div class="player-left">
+    <div class="pl-cover-wrap"><img id="plCover" class="pl-cover" src="../albumImages/album1.png" alt=""></div>
+    <div class="pl-meta">
+      <span class="pl-title" id="plTitle">Sin reproducción</span>
+      <span class="pl-artist" id="plArtist">Elige una canción</span>
+    </div>
+  </div>
+  <div class="player-center">
+    <div class="pl-controls">
+      <button class="pl-btn" id="btnShuffle" type="button" title="Aleatorio"><svg class="ico"><use href="#i-shuffle"/></svg></button>
+      <button class="pl-btn" id="btnPrev" type="button" title="Anterior"><svg class="ico"><use href="#i-prev"/></svg></button>
+      <button class="pl-play" id="btnPlay" type="button" title="Reproducir">
+        <svg class="ico" id="playIcon"><use href="#i-play"/></svg></button>
+      <button class="pl-btn" id="btnNext" type="button" title="Siguiente"><svg class="ico"><use href="#i-next"/></svg></button>
+      <button class="pl-btn" id="btnRepeat" type="button" title="Repetir">
+        <svg class="ico" id="repeatIcon"><use href="#i-repeat"/></svg></button>
+    </div>
+    <div class="pl-progress">
+      <span class="pl-time" id="plCur">0:00</span>
+      <input type="range" id="plSeek" class="range" min="0" max="100" step="0.1" value="0">
+      <span class="pl-time" id="plDur">0:00</span>
+    </div>
+  </div>
+  <div class="player-right">
+    <button class="pl-btn" id="btnMute" type="button" title="Silenciar">
+      <svg class="ico" id="volIcon"><use href="#i-volume"/></svg></button>
+    <input type="range" id="plVol" class="range range-vol" min="0" max="1" step="0.01" value="0.8">
+  </div>
+</div>
+<audio id="pmAudio" preload="metadata"></audio>
+<div class="toasts" id="toasts"></div>
+<script>window.PM_BASE = "";</script>
+<script src="../Assets/Js/player.js"></script>
+<script src="preview.js"></script>
+</body>
+</html>
