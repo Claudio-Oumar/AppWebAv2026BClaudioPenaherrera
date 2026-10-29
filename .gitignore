@@ -1,0 +1,24 @@
+# Metadatos de Copilot
+.workbuddy-ai/
+
+# Variables y configuraciones locales
+.env
+.env.*
+!.env.example
+**/config.local.asp
+
+# Archivos generados por IIS/despliegue
+**/tools/deploy-log.txt
+*.log
+*.tmp
+*.bak
+
+
+# IDE y sistema
+.vscode/
+.idea/
+*.user
+*.suo
+*.code-workspace
+Thumbs.db
+.DS_Store
