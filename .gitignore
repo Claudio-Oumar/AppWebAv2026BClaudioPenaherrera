@@ -1,20 +1,28 @@
-# Metadatos de Copilot
+
+# ==========================================
+# METADATOS DE COPILOT
+# ==========================================
 .workbuddy-ai/
 
-# Variables y configuraciones locales
+# ==========================================
+# VARIABLES Y CONFIGURACIONES LOCALES
+# ==========================================
 .env
 .env.*
 !.env.example
 **/config.local.asp
 
-# Archivos generados por IIS/despliegue
+# ==========================================
+# ARCHIVOS GENERADOS POR IIS / DESPLIEGUE
+# ==========================================
 **/tools/deploy-log.txt
 *.log
 *.tmp
 *.bak
 
-
-# IDE y sistema
+# ==========================================
+# IDE Y SISTEMA
+# ==========================================
 .vscode/
 .idea/
 *.user
@@ -22,3 +30,30 @@
 *.code-workspace
 Thumbs.db
 .DS_Store
+
+# ==========================================
+# VISUAL STUDIO 2026
+# ==========================================
+.vs/
+*.userosscache
+*.sln.docstates
+
+# ==========================================
+# ARCHIVOS DE COMPILACION .NET
+# ==========================================
+**/bin/
+**/obj/
+
+# ==========================================
+# PAQUETES NUGET RESTAURABLES
+# ==========================================
+**/packages/
+
+# ==========================================
+# ARCHIVOS TEMPORALES DE VISUAL STUDIO
+# ==========================================
+*.cache
+*.pdb
+*.ilk
+*.tlog
+*.lastbuildstate
