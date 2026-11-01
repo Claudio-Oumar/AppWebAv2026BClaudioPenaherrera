@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/WebAppPoliMusicV2_ASPX_F2.0/">
+    <Project Path="WebAppPoliMusicV2/WebAppPoliMusicV2.csproj" Id="c74e87bf-b9a3-4263-b710-9d4194306f7c" />
+  </Folder>
   <Folder Name="/WebAppPoliMusicV3_ASPX_F4.8_NLAYER/">
     <Project Path="BLL.PoliMusicV3/BLL.PoliMusicV3.csproj" Id="6323538c-2a75-4de2-a3c0-0fda444b53aa" />
     <Project Path="DAL.PoliMusicV3/DAL.PoliMusicV3.csproj" Id="cf673d1c-0029-44f5-b438-490d43a260e3" />
